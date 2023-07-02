@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "sst bind next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -43,6 +43,9 @@
   "devDependencies": {
     "@types/uniqid": "^5.3.2",
     "encoding": "^0.1.13",
-    "supabase": "^1.64.2"
+    "supabase": "^1.64.2",
+    "sst": "^2.18.1",
+    "aws-cdk-lib": "2.84.0",
+    "constructs": "10.1.156"
   }
 }

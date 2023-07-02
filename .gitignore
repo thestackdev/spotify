@@ -33,3 +33,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# sst
+.sst
+.build
+
+# opennext
+.open-next

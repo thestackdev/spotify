@@ -1,17 +1,13 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
-
+import { supabaseAction } from "@/libs/supabase-server";
 import { Song } from "@/types";
 
 const getSongById = async (id: string): Promise<Song> => {
-  const supabase = createServerComponentClient({
-    cookies: cookies
-  });
+  const supabase = supabaseAction();
 
   const { data, error } = await supabase
-    .from('songs')
-    .select('*')
-    .eq('id', id)
+    .from("songs")
+    .select("*")
+    .eq("id", id)
     .single();
 
   if (error) {
